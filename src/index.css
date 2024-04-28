@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  list-style: none;
+}
+
+.todo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white  ;
+  height: 100vh;
+  text-align: center;
+}
+.todo h1{
+  font-size: 2.5rem;
+}
+
+.todo-main{
+  color: white;
+  background-color: red;
+  padding: 50px;
+  border-radius: 16px;
+}
+.todo-main #addTask{
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  width: 90%;
+  height: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 28px;
+  
+}
+.submit{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  background: white;
+  border: none;
+}
+#new-task{
+  border: 1px solid black;
+  margin-top: 30px;
+  width: 50%;
+  height: 35px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  background: none;
+}
+.all-tasks ul{
+  width: 70%;
+  text-align: left;
+  margin-top: 30px;
+}
+.all-tasks ul li{
+  padding: 0 20px;
+  font-size: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.delete{
+  height: 25px;
+  width: 25px;
+  background: none;
+  font-size: 25px;
+  border-radius: 50%;
+  border: none;
+}
