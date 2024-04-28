@@ -18,16 +18,20 @@ function App() {
 
   };
 
+  const deleteTask = ()=>{
+    console.log(input);
+  }
+
   return (
     <>
       <div className="todo">
         <div className="todo-main">
-          <h1>Write Your Tasks Below</h1>
+          <h1>To-Do List</h1>
           <input
             type="text"
             name="addTask"
             id="addTask"
-            placeholder="add a task"
+            placeholder="Add a task"
             value={input}
             onChange={taskName}
           />
@@ -41,9 +45,6 @@ function App() {
 
                   <li>
                     {itemValue}
-                    <button className="delete" >
-                      <MdDeleteForever />
-                    </button>
                   </li>
 
                 );
