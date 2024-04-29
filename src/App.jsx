@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { MdDeleteForever } from "react-icons/md";
+import TodoMain from "./components/TodoMain";
 
 function App() {
   const [input, setInput] = useState('');
@@ -17,10 +18,14 @@ function App() {
     setInput('');
 
   };
+const deleteTask = (id) => {
+  setItems((prevItems) => {
+    return prevItems.filter((_arrElement, index) => {
+      return index !== id;
+    });
+  });
+};
 
-  const deleteTask = ()=>{
-    console.log(input);
-  }
 
   return (
     <>
@@ -40,12 +45,10 @@ function App() {
             <ul>
               {/* <li>{input} <button className='delete' onClick={putItem}><MdDeleteForever/></button></li> */}
 
-              {items.map((itemValue) => {
+              {items.map((itemValue, index) => {
                 return (
 
-                  <li>
-                    {itemValue}
-                  </li>
+                 <TodoMain key={index} id={index} text= {itemValue} onSelect={deleteTask} />
 
                 );
               })}
